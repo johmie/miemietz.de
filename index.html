@@ -2,14 +2,6 @@
 <html lang="de">
 
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EKTWH577K1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-EKTWH577K1');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Johannes Miemietz | Freelance Software Developer</title>
@@ -220,7 +212,16 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <div id="cookie-consent" class="cookie-consent">
+        <p data-i18n="cookie.message">Diese Website verwendet Cookies, um die Benutzererfahrung zu verbessern. Dabei wird Google Analytics eingesetzt, um Besucherstatistiken zu erheben. Ihre Daten werden anonymisiert und nicht an Dritte weitergegeben.</p>
+        <div class="cookie-buttons">
+            <a href="imprint.html" onclick="goToImprint(event)" class="cookie-link" data-i18n="cookie.settings">Mehr erfahren</a>
+            <button class="btn-decline" onclick="declineCookies()" data-i18n="cookie.decline">Ablehnen</button>
+            <button class="btn-accept" onclick="acceptCookies()" data-i18n="cookie.accept">Akzeptieren</button>
+        </div>
+    </div>
+
+    <script src="script.js?v=9"></script></script></script></script>
     <script>
         // Smooth scroll navigation
         document.querySelectorAll('nav a').forEach(anchor => {
