@@ -61,6 +61,14 @@ const observer = new IntersectionObserver((entries) => {
 
 fadeElements.forEach(el => observer.observe(el));
 
+// Trigger immediately if already in viewport on page load
+fadeElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+        el.classList.add('visible');
+    }
+});
+
 // Active nav on scroll
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('nav a');
