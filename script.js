@@ -226,7 +226,7 @@ function checkCookieConsent() {
 
     const consent = localStorage.getItem('cookie_consent');
     const fromCookie = sessionStorage.getItem('from_cookie_consent');
-    
+
     if (consent === 'accepted') {
         enableGoogleAnalytics();
         consentBanner.classList.remove('active');
@@ -261,7 +261,7 @@ function enableGoogleAnalytics() {
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-EKTWH577K1');
-    
+
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=G-EKTWH577K1';
