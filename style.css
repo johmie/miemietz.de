@@ -50,29 +50,29 @@ body {
 }
 
 .orb-1 {
-    width: 600px;
-    height: 600px;
+    width: 60%;
+    height: 60%;
     background: var(--accent-magenta);
-    top: -200px;
-    left: -200px;
+    top: -20%;
+    left: -20%;
     animation-delay: 0s;
 }
 
 .orb-2 {
-    width: 500px;
-    height: 500px;
+    width: 60%;
+    height: 60%;
     background: var(--accent-cyan);
-    top: 50%;
-    right: -150px;
+    top: 40%;
+    right: -15%;
     animation-delay: -7s;
 }
 
 .orb-3 {
-    width: 400px;
-    height: 400px;
+    width: 60%;
+    height: 60%;
     background: var(--accent-gold);
-    bottom: -100px;
-    left: 30%;
+    bottom: -10%;
+    left: 20%;
     animation-delay: -14s;
 }
 
