@@ -5,8 +5,8 @@ document.querySelectorAll('[data-p1]').forEach(el => {
     el.textContent = data;
     el.addEventListener('click', function (e) {
         e.preventDefault();
-        const ma = 'mai' + 'lto';
-        window.location.href = ma + ':' + data;
+        const mt = 'mai' + 'lto';
+        window.location.href = mt + ':' + data;
     });
 });
 
@@ -57,17 +57,9 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('visible');
         }
     });
-}, { threshold: 0.1 });
+}, { threshold: 0.01 });
 
 fadeElements.forEach(el => observer.observe(el));
-
-// Trigger immediately if already in viewport on page load
-fadeElements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-        el.classList.add('visible');
-    }
-});
 
 // Active nav on scroll
 const sections = document.querySelectorAll('section');
@@ -94,7 +86,7 @@ function setNavigationActive() {
 const translations = {
     de: {
         nav: { home: 'Start', about: 'Über mich', skills: 'Fähigkeiten', contact: 'Kontakt' },
-        hero: { subtitle: 'Freelance Softwareentwickler', location: 'Berlin, Deutschland', cta: 'Kontakt aufnehmen' },
+        hero: { subtitle: 'Freelance Softwareentwickler', location: 'Berlin, Deutschland', contact: 'Kontakt aufnehmen' },
         about: { title: 'Über mich', p1: 'Ich bin ein freiberuflicher Softwareentwickler mit über 20 Jahren Erfahrung in der Entwicklung robuster, skalierbarer Anwendungen. Ich lebe in Berlin und spezialisiere mich auf elegante Lösungen für reale Probleme.', p2: 'Mein Ansatz kombiniert Clean-Code-Prinzipien mit modernen Entwicklungsmethoden, um wartbare und leistungsstarke Anwendungen zu erstellen. Ich setze komplexe Anforderungen in saubere, effiziente Softwarearchitektur um.', badge: '20+ Jahre Erfahrung' },
         skills: { title: 'Fähigkeiten & Technologien', backend: 'Backend', frontend: 'Frontend', databases: 'Datenbanken', practices: 'Praktiken' },
         contact: { title: 'Kontakt', name: 'Name', namePlaceholder: 'Ihr Name', email: 'E-Mail', emailPlaceholder: 'ihre@email.de', message: 'Nachricht', messagePlaceholder: 'Erzählen Sie mir von Ihrem Projekt...', submit: 'Nachricht senden', direct: 'Oder schreiben Sie mir direkt an' },
@@ -107,7 +99,7 @@ const translations = {
     },
     en: {
         nav: { home: 'Home', about: 'About', skills: 'Skills', contact: 'Contact' },
-        hero: { subtitle: 'Freelance Software Developer', location: 'Berlin, Germany', cta: 'Get In Touch' },
+        hero: { subtitle: 'Freelance Software Developer', location: 'Berlin, Germany', contact: 'Get In Touch' },
         about: { title: 'About Me', p1: "I'm a freelance software developer with over 20 years of experience building robust, scalable applications. Based in Berlin, I specialize in creating elegant solutions that solve real-world problems.", p2: "My approach combines clean code principles with modern development practices, ensuring maintainable and performant applications. I thrive on turning complex requirements into clean, efficient software architecture.", badge: '20+ Years Experience' },
         skills: { title: 'Skills & Technologies', backend: 'Backend', frontend: 'Frontend', databases: 'Databases', practices: 'Practices' },
         contact: { title: 'Get In Touch', name: 'Name', namePlaceholder: 'Your name', email: 'Email', emailPlaceholder: 'your@email.com', message: 'Message', messagePlaceholder: 'Tell me about your project...', submit: 'Send Message', direct: 'Or email me directly at' },
@@ -120,7 +112,7 @@ const translations = {
     },
     zh: {
         nav: { home: '首页', about: '关于', skills: '技能', contact: '联系' },
-        hero: { subtitle: '自由软件开发者', location: '德国柏林', cta: '联系我' },
+        hero: { subtitle: '自由软件开发者', location: '德国柏林', contact: '联系我' },
         about: { title: '关于我', p1: '我是一名自由软件开发者，拥有超过20年构建健壮、可扩展应用的经验。居住在柏林，我专注于创造优雅的解决方案来解决现实世界的问题。', p2: '我的方法结合了Clean Code原则和现代开发实践，确保应用的可维护性和高性能。', badge: '20年以上经验' },
         skills: { title: '技能与技术', backend: '后端', frontend: '前端', databases: '数据库', practices: '实践' },
         contact: { title: '联系我', name: '姓名', namePlaceholder: '您的姓名', email: '邮箱', emailPlaceholder: 'your@email.com', message: '留言', messagePlaceholder: '请告诉我您的项目...', submit: '发送消息', direct: '或直接发邮件至' },
