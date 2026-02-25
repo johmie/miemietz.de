@@ -121,11 +121,14 @@
     </footer>
 
     <div id="cookie-consent" class="cookie-consent">
-        <p data-i18n="cookie.message">Diese Website verwendet Cookies, um die Benutzererfahrung zu verbessern. Dabei wird Google Analytics eingesetzt, um Besucherstatistiken zu erheben. Ihre Daten werden anonymisiert und nicht an Dritte weitergegeben.</p>
+        <p data-i18n="cookie.message">Diese Website verwendet Cookies, um die Benutzererfahrung zu verbessern. Dabei
+            wird Google Analytics eingesetzt, um Besucherstatistiken zu erheben. Ihre Daten werden anonymisiert und
+            nicht an Dritte weitergegeben.</p>
         <div class="cookie-buttons">
-            <a href="#google-analytics" onclick="document.getElementById('cookie-consent').classList.remove('active');" class="cookie-link" data-i18n="cookie.settings">Mehr erfahren</a>
-            <button class="btn-decline" onclick="declineCookies()" data-i18n="cookie.decline">Ablehnen</button>
-            <button class="btn-accept" onclick="acceptCookies()" data-i18n="cookie.accept">Akzeptieren</button>
+            <a href="#google-analytics" onclick="goToImprint(event)" class="cookie-link" data-i18n="cookie.settings">Mehr
+                erfahren</a>
+            <button class="button button-secondary" onclick="declineCookies()" data-i18n="cookie.decline">Ablehnen</button>
+            <button class="button" onclick="acceptCookies()" data-i18n="cookie.accept">Akzeptieren</button>
         </div>
     </div>
 

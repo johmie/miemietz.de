@@ -232,6 +232,7 @@ function checkCookieConsent() {
         consentBanner.classList.remove('active');
     } else if (fromCookie === 'true') {
         sessionStorage.removeItem('from_cookie_consent');
+        consentBanner.classList.add('active');
     } else if (!consent) {
         consentBanner.classList.add('active');
     }
@@ -253,6 +254,7 @@ function declineCookies() {
 function goToImprint(e) {
     e.preventDefault();
     sessionStorage.setItem('from_cookie_consent', 'true');
+    document.getElementById('cookie-consent').classList.remove('active');
     window.location.href = 'imprint.html#google-analytics';
 }
 
