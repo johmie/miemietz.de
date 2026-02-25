@@ -827,8 +827,7 @@ footer p {
         flex-direction: column;
     }
 
-    .cookie-consent .btn-accept,
-    .cookie-consent .btn-decline {
+    .cookie-consent .button {
         width: 100%;
     }
 }
