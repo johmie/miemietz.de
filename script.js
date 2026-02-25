@@ -232,7 +232,6 @@ function checkCookieConsent() {
         consentBanner.classList.remove('active');
     } else if (fromCookie === 'true') {
         sessionStorage.removeItem('from_cookie_consent');
-        consentBanner.classList.add('active');
     } else if (!consent) {
         consentBanner.classList.add('active');
     }
