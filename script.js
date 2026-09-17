@@ -10,6 +10,11 @@ document.querySelectorAll('[data-p1]').forEach(el => {
     });
 });
 
+document.querySelectorAll('[data-p3]').forEach(el => {
+    const chars = el.dataset.p3.split(',').map(Number);
+    el.textContent = String.fromCharCode(...chars);
+});
+
 // Glass Modal - Replace alert()
 function configureModal() {
     const modal = document.getElementById('glass-modal');
